@@ -1,7 +1,7 @@
 //Set up the server and configure routing
 const express = require('express');
 const bodyParser = require('body-parser');
-const webhookRoutes = require('./routes/webhook');
+const webhookRoutes = require('./src/routes/webhook');
 require('dotenv').config();
 
 const app = express();

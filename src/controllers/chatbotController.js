@@ -1,7 +1,7 @@
 const { detectIntent } = require('../services/dialogflowService');
 const { sendMessage } = require('../services/twilioService');
 const { fetchRecommendedProperties } = require('../services/propertyService');
-const { formatResponse } = require('../helpers/responseHelper');
+const { formatResponse } = require('../utils/helpers');
 const Lead = require('../models/lead');
 
 exports.handleMessage = async (req, res) => {
