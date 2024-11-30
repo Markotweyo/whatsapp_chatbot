@@ -1,0 +1,21 @@
+/whatsapp-chatbot
+├── app.js                # Main app entry
+├── routes
+│   └── webhook.js        # Twilio webhook handling
+├── services
+│   ├── dialogflowService.js  # Dialogflow API handling
+│   ├── twilioService.js      # Twilio API handling
+│   ├── propertyService.js    # Fetch property recommendations
+├── models
+│   └── lead.js           # MongoDB schema for storing leads
+├── .env                  # Environment variables
+├── package.json          # Node.js dependencies
+
+
+
+WhatsApp Message --> Twilio (Webhook) --> Node.js (Backend)
+    Node.js --> Dialogflow (Intent Detection)
+    Node.js <-- Dialogflow (Response)
+    Node.js --> API (Fetch Data, e.g., Properties)
+    Node.js --> Twilio (Send WhatsApp Message)
+    Twilio --> WhatsApp (User Response)
